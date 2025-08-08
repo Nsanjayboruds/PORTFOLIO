@@ -73,7 +73,7 @@ function Education() {
 
                 <VerticalTimelineElement
                     className="vertical-timeline-element--education"
-                    date="2020 - 2022"
+                    date="2022 - 2023"
                     contentStyle={{ background: "#fff", color: "purple" }}
                     contentArrowStyle={{ borderRight: "7px solid #00ffc8" }}
                     iconStyle={{
