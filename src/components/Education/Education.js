@@ -40,7 +40,7 @@ function Education() {
             <VerticalTimeline lineColor="#00c9ff">
                 <VerticalTimelineElement
                     className="vertical-timeline-element--education"
-                    date="2022 - 2025"
+                    date="2023 - 2027"
                     contentStyle={{
                         // background: "linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%)",
                         background:"linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%)",
@@ -73,7 +73,7 @@ function Education() {
 
                 <VerticalTimelineElement
                     className="vertical-timeline-element--education"
-                    date="2020 - 2022"
+                    date="2022 - 2023"
                     contentStyle={{ background: "#fff", color: "purple" }}
                     contentArrowStyle={{ borderRight: "7px solid #00ffc8" }}
                     iconStyle={{
