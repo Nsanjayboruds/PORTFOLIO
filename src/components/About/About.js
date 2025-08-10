@@ -3,10 +3,10 @@ import { Container, Row, Col } from "react-bootstrap";
 import Github from "./Github";
 import Techstack from "./Techstack";
 import Aboutcard from "./AboutCard";
-import laptopImg from "../../Assets/about.png";
 import Toolstack from "./Toolstack";
 import Particles from "../Particles";
-
+import ProfileCard from "../ProfileCard";
+import avatar from "../../Assets/avatarmy.jpg";
 function About() {
   return (
     <section style={{ position: "relative", overflow: "hidden" }}>
@@ -46,7 +46,22 @@ function About() {
               style={{ paddingTop: "120px", paddingBottom: "50px" }}
               className="about-img"
             >
-              <img src={laptopImg} alt="about" className="img-fluid" />
+              
+            <ProfileCard
+                name="NISHANT BORUDE"
+                title="FULL STACK DEVELOPER"
+                handle="NishantBorude"
+                status="Online"
+                contactText="Contact Me"
+                avatarUrl={avatar}
+                showUserInfo={true}
+                enableTilt={true}
+                enableMobileTilt={false}
+               onContactClick={() => window.open('https://github.com/Nsanjayboruds', '_blank')}
+            />
+
+              
+              {/* <img src={laptopImg} alt="about" className="img-fluid" /> */}
             </Col>
           </Row>
 
