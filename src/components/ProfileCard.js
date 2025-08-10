@@ -45,9 +45,9 @@ const ProfileCardComponent = ({
   enableMobileTilt = false,
   mobileTiltSensitivity = 5,
   miniAvatarUrl,
-  name = "Javi A. Torres",
-  title = "Software Engineer",
-  handle = "javicodes",
+  name = "NISHANT BORUDE",
+  title = "FULL STACK DEVELOPER",
+  handle = "NishantBorude",
   status = "Online",
   contactText = "Contact",
   showUserInfo = true,
@@ -217,20 +217,21 @@ const ProfileCardComponent = ({
     const deviceOrientationHandler = handleDeviceOrientation;
 
     const handleClick = () => {
-      if (!enableMobileTilt || location.protocol !== 'https:') return;
-      if (typeof window.DeviceMotionEvent.requestPermission === 'function') {
-        window.DeviceMotionEvent
-          .requestPermission()
-          .then(state => {
-            if (state === 'granted') {
-              window.addEventListener('deviceorientation', deviceOrientationHandler);
-            }
-          })
-          .catch(err => console.error(err));
-      } else {
-        window.addEventListener('deviceorientation', deviceOrientationHandler);
-      }
-    };
+  if (!enableMobileTilt || window.location.protocol !== 'https:') return;
+  if (typeof window.DeviceMotionEvent.requestPermission === 'function') {
+    window.DeviceMotionEvent
+      .requestPermission()
+      .then(state => {
+        if (state === 'granted') {
+          window.addEventListener('deviceorientation', deviceOrientationHandler);
+        }
+      })
+      .catch(err => console.error(err));
+  } else {
+    window.addEventListener('deviceorientation', deviceOrientationHandler);
+  }
+};
+
 
     card.addEventListener("pointerenter", pointerEnterHandler);
     card.addEventListener("pointermove", pointerMoveHandler);

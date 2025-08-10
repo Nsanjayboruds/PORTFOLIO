@@ -46,8 +46,8 @@ function About() {
               style={{ paddingTop: "120px", paddingBottom: "50px" }}
               className="about-img"
             >
-              
-            <ProfileCard
+
+              <ProfileCard
                 name="NISHANT BORUDE"
                 title="FULL STACK DEVELOPER"
                 handle="NishantBorude"
@@ -57,10 +57,10 @@ function About() {
                 showUserInfo={true}
                 enableTilt={true}
                 enableMobileTilt={false}
-               onContactClick={() => window.open('https://github.com/Nsanjayboruds', '_blank')}
-            />
+                onContactClick={() => window.open('https://github.com/Nsanjayboruds', '_blank')}
+              />
 
-              
+
               {/* <img src={laptopImg} alt="about" className="img-fluid" /> */}
             </Col>
           </Row>
