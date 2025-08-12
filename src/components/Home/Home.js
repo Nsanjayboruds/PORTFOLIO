@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import homeLogo from "../../Assets/Programming Computer.gif";
 import Home2 from "./Home2";
 import Type from "./Type";
 import Particles from "../Particles";
 
 function Home() {
+  useEffect(() => {
+    const scriptId = "spline-viewer-script";
+    if (!document.getElementById(scriptId)) {
+      const script = document.createElement("script");
+      script.type = "module";
+      script.id = scriptId;
+      script.src = "https://unpkg.com/@splinetool/viewer@1.10.44/build/spline-viewer.js";
+      document.body.appendChild(script);
+    }
+  }, []);
+
   return (
     <section style={{ position: "relative", overflow: "hidden" }}>
       {/* Particle Background */}
@@ -54,21 +64,15 @@ function Home() {
             </Col>
 
             <Col md={5} style={{ paddingBottom: 20 }}>
-  <img
-    src={homeLogo}
-    alt="home pic"
-    className="img-fluid animated-home-logo"
-    style={{
-      width: "100%",
-      height: "auto",
-      maxHeight: "700px", // You can increase this further
-      objectFit: "contain", // Ensures image fits nicely
-      imageRendering: "auto", // Can use "crisp-edges" or "high-quality" if SVG
-    }}
-  />
-</Col>
-
-
+              {/* ✅ Spline Viewer Replacing the Image */}
+              <div style={{ width: "100%", height: "500px" }}>
+                <spline-viewer
+                  url="https://prod.spline.design/wusBdKcJteOBdL7Q/scene.splinecode"
+                  transparent
+                  style={{ width: "100%", height: "100%" }}
+                ></spline-viewer>
+              </div>
+            </Col>
           </Row>
         </Container>
       </Container>
