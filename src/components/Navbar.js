@@ -109,6 +109,15 @@ function NavBar() {
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
               </Nav.Link>
             </Nav.Item>
+             <Nav.Item>
+              <Nav.Link
+                as={Link}
+                to="/experience"
+                onClick={() => updateExpanded(false)}
+              >
+                <CgFileDocument style={{ marginBottom: "2px" }} />  Experience
+              </Nav.Link>
+            </Nav.Item>
 
 
              <Nav.Item>
@@ -121,15 +130,7 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
-            {/* <Nav.Item>
-              <Nav.Link
-                href="https://soumyajitblogs.vercel.app/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <ImBlog style={{ marginBottom: "2px" }} />
-              </Nav.Link>
-            </Nav.Item> */}
+           
 
             <Nav.Item className="fork-btn">
               <Button

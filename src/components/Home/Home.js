@@ -1,24 +1,13 @@
 import React, { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import Spline from "@splinetool/react-spline"; // ✅ Add this
 import Home2 from "./Home2";
 import Type from "./Type";
 import Particles from "../Particles";
 
 function Home() {
-  useEffect(() => {
-    const scriptId = "spline-viewer-script";
-    if (!document.getElementById(scriptId)) {
-      const script = document.createElement("script");
-      script.type = "module";
-      script.id = scriptId;
-      script.src = "https://unpkg.com/@splinetool/viewer@1.10.44/build/spline-viewer.js";
-      document.body.appendChild(script);
-    }
-  }, []);
-
   return (
     <section style={{ position: "relative", overflow: "hidden" }}>
-      {/* Particle Background */}
       <div
         style={{
           position: "fixed",
@@ -41,7 +30,6 @@ function Home() {
         />
       </div>
 
-      {/* Foreground Content */}
       <Container fluid className="home-section" id="home">
         <Container className="home-content">
           <Row>
@@ -64,13 +52,8 @@ function Home() {
             </Col>
 
             <Col md={5} style={{ paddingBottom: 20 }}>
-              {/* ✅ Spline Viewer Replacing the Image */}
               <div style={{ width: "100%", height: "500px" }}>
-                <spline-viewer
-                  url="https://prod.spline.design/wusBdKcJteOBdL7Q/scene.splinecode"
-                  transparent
-                  style={{ width: "100%", height: "100%" }}
-                ></spline-viewer>
+                <Spline scene="https://prod.spline.design/wusBdKcJteOBdL7Q/scene.splinecode" />
               </div>
             </Col>
           </Row>
